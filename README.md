@@ -11,3 +11,4 @@ Fixture repo for the v2.0 SWE agent capability tests. DO NOT use for real work.
 ## Known bugs (intentional)
 
 - Issue #2: `calculator.add()` returns the product instead of the sum.
+Tier 4 test marker
