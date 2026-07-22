@@ -2,6 +2,10 @@ from calculator import add, divide, multiply, subtract
 ||||||| parent of 4164bb1 (feat: add multiply() to calculator)
 from calculator import add, subtract
 from calculator import add, subtract, multiply
+||||||| parent of 1b12a36 (feat: add power() function to calculator)
+||||||| parent of 8776601 (feat: add power() function to calculator)
+from calculator import add, subtract
+from calculator import add, subtract, power
 
 
 def test_add():
@@ -58,3 +62,31 @@ def test_multiply_zero():
 
 def test_multiply_negative():
     assert multiply(-1, 4) == -4
+||||||| parent of 1b12a36 (feat: add power() function to calculator)
+||||||| parent of 8776601 (feat: add power() function to calculator)
+
+
+def test_power():
+    assert power(2, 3) == 8
+    assert power(5, 2) == 25
+
+
+def test_power_zero_exponent():
+    assert power(5, 0) == 1
+    assert power(0, 0) == 1
+    assert power(-3, 0) == 1
+
+
+def test_power_zero_base():
+    assert power(0, 5) == 0
+
+
+def test_power_negative_base():
+    assert power(-2, 3) == -8
+    assert power(-2, 2) == 4
+
+
+def test_power_negative_exponent():
+    assert power(2, -1) == 0.5
+    assert power(4, -2) == 0.0625
+    assert power(-2, -2) == 0.25
