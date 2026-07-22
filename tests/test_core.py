@@ -1,4 +1,6 @@
-from calculator import add, subtract
+import pytest
+
+from calculator import add, factorial, subtract
 
 
 def test_add():
@@ -15,3 +17,20 @@ def test_add_negatives():
 
 def test_subtract():
     assert subtract(5, 3) == 2
+
+
+def test_factorial_zero():
+    assert factorial(0) == 1
+
+
+def test_factorial_one():
+    assert factorial(1) == 1
+
+
+def test_factorial_positive():
+    assert factorial(5) == 120
+
+
+def test_factorial_negative_raises():
+    with pytest.raises(ValueError):
+        factorial(-1)
