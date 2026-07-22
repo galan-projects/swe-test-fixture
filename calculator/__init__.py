@@ -9,3 +9,7 @@ from .core import add, subtract, multiply
 ||||||| parent of 8776601 (feat: add power() function to calculator)
 from .core import add, subtract
 from .core import add, subtract, power
+||||||| parent of 6ca057a (feat: add divide() to calculator)
+||||||| parent of a400393 (feat: add divide() to calculator)
+from .core import add, subtract
+from .core import add, subtract, divide

@@ -6,6 +6,12 @@ from calculator import add, subtract, multiply
 ||||||| parent of 8776601 (feat: add power() function to calculator)
 from calculator import add, subtract
 from calculator import add, subtract, power
+||||||| parent of 6ca057a (feat: add divide() to calculator)
+||||||| parent of a400393 (feat: add divide() to calculator)
+from calculator import add, subtract
+from calculator import add, subtract, divide
+
+import pytest
 
 
 def test_add():
@@ -90,3 +96,24 @@ def test_power_negative_exponent():
     assert power(2, -1) == 0.5
     assert power(4, -2) == 0.0625
     assert power(-2, -2) == 0.25
+||||||| parent of 6ca057a (feat: add divide() to calculator)
+||||||| parent of a400393 (feat: add divide() to calculator)
+
+
+def test_divide():
+    assert divide(6, 3) == 2.0
+
+
+def test_divide_float_result():
+    assert divide(7, 2) == 3.5
+
+
+def test_divide_negatives():
+    assert divide(-6, 3) == -2.0
+    assert divide(6, -3) == -2.0
+    assert divide(-6, -3) == 2.0
+
+
+def test_divide_by_zero():
+    with pytest.raises(ValueError):
+        divide(1, 0)
