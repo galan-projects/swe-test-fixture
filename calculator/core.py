@@ -83,3 +83,25 @@ def divide(a, b):
 def is_even(n):
     """Return True if n is even, False otherwise."""
     return n % 2 == 0
+||||||| parent of e8150a3 (feat: add factorial() to calculator)
+||||||| parent of 8de4b8a (feat: add factorial() to calculator)
+
+
+def factorial(n):
+    """Return n! (n factorial) for a non-negative integer n.
+
+    Args:
+        n: Non-negative integer.
+
+    Returns:
+        The product of all integers from 1 to n. factorial(0) is 1.
+
+    Raises:
+        ValueError: If n is negative.
+    """
+    if n < 0:
+        raise ValueError("factorial is not defined for negative integers")
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
