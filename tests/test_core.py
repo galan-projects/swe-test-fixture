@@ -12,6 +12,10 @@ from calculator import add, subtract
 from calculator import add, subtract, divide
 
 import pytest
+||||||| parent of 9a1cf6f (feat: add is_even() to calculator)
+||||||| parent of ca2133d (feat: add is_even() to calculator)
+from calculator import add, subtract
+from calculator import add, subtract, is_even
 
 
 def test_add():
@@ -117,3 +121,25 @@ def test_divide_negatives():
 def test_divide_by_zero():
     with pytest.raises(ValueError):
         divide(1, 0)
+||||||| parent of 9a1cf6f (feat: add is_even() to calculator)
+||||||| parent of ca2133d (feat: add is_even() to calculator)
+
+
+def test_is_even_positive_even():
+    assert is_even(4) is True
+
+
+def test_is_even_positive_odd():
+    assert is_even(3) is False
+
+
+def test_is_even_zero():
+    assert is_even(0) is True
+
+
+def test_is_even_negative_even():
+    assert is_even(-2) is True
+
+
+def test_is_even_negative_odd():
+    assert is_even(-3) is False

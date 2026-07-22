@@ -13,3 +13,7 @@ from .core import add, subtract, power
 ||||||| parent of a400393 (feat: add divide() to calculator)
 from .core import add, subtract
 from .core import add, subtract, divide
+||||||| parent of 9a1cf6f (feat: add is_even() to calculator)
+||||||| parent of ca2133d (feat: add is_even() to calculator)
+from .core import add, subtract
+from .core import add, subtract, is_even
