@@ -32,3 +32,9 @@ def divide(a, b):
     if b == 0:
         raise ValueError("Cannot divide by zero")
     return a / b
+||||||| parent of 4164bb1 (feat: add multiply() to calculator)
+
+
+def multiply(a, b):
+    """Return a * b."""
+    return a * b

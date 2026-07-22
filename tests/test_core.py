@@ -1,4 +1,7 @@
 from calculator import add, divide, multiply, subtract
+||||||| parent of 4164bb1 (feat: add multiply() to calculator)
+from calculator import add, subtract
+from calculator import add, subtract, multiply
 
 
 def test_add():
@@ -42,3 +45,16 @@ def test_divide_by_zero():
 
     with pytest.raises(ValueError, match="Cannot divide by zero"):
         divide(1, 0)
+||||||| parent of 4164bb1 (feat: add multiply() to calculator)
+
+
+def test_multiply():
+    assert multiply(2, 3) == 6
+
+
+def test_multiply_zero():
+    assert multiply(0, 5) == 0
+
+
+def test_multiply_negative():
+    assert multiply(-1, 4) == -4
