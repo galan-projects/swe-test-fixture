@@ -11,6 +11,11 @@ def subtract(a, b):
     return a - b
 
 
+def multiply(a, b):
+    """Return a * b."""
+    return a * b
+
+
 def divide(a, b):
     """Return a / b as a float.
 
