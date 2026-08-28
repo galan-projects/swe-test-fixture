@@ -56,3 +56,23 @@ def power(a, b):
         integer exponents (e.g. ``power(-2, 3) == -8``).
     """
     return a ** b
+||||||| parent of 6ca057a (feat: add divide() to calculator)
+||||||| parent of a400393 (feat: add divide() to calculator)
+
+
+def divide(a, b):
+    """Return a / b.
+
+    Args:
+        a: The dividend.
+        b: The divisor.
+
+    Returns:
+        The quotient a / b as a float.
+
+    Raises:
+        ValueError: If b is zero.
+    """
+    if b == 0:
+        raise ValueError("division by zero")
+    return a / b
