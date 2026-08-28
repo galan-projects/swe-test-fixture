@@ -76,3 +76,10 @@ def divide(a, b):
     if b == 0:
         raise ValueError("division by zero")
     return a / b
+||||||| parent of 9a1cf6f (feat: add is_even() to calculator)
+||||||| parent of ca2133d (feat: add is_even() to calculator)
+
+
+def is_even(n):
+    """Return True if n is even, False otherwise."""
+    return n % 2 == 0
