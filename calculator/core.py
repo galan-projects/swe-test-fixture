@@ -38,3 +38,21 @@ def divide(a, b):
 def multiply(a, b):
     """Return a * b."""
     return a * b
+||||||| parent of 1b12a36 (feat: add power() function to calculator)
+||||||| parent of 8776601 (feat: add power() function to calculator)
+
+
+def power(a, b):
+    """Return a raised to the power of b (a ** b).
+
+    Args:
+        a: The base.
+        b: The exponent.
+
+    Returns:
+        The result of a ** b. Follows Python exponentiation semantics:
+        ``a ** 0`` is 1 for any ``a``, negative exponents return floats
+        (e.g. ``power(2, -1) == 0.5``), and negative bases work with
+        integer exponents (e.g. ``power(-2, 3) == -8``).
+    """
+    return a ** b
