@@ -16,6 +16,12 @@ import pytest
 ||||||| parent of ca2133d (feat: add is_even() to calculator)
 from calculator import add, subtract
 from calculator import add, subtract, is_even
+||||||| parent of e8150a3 (feat: add factorial() to calculator)
+||||||| parent of 8de4b8a (feat: add factorial() to calculator)
+from calculator import add, subtract
+import pytest
+
+from calculator import add, factorial, subtract
 
 
 def test_add():
@@ -143,3 +149,22 @@ def test_is_even_negative_even():
 
 def test_is_even_negative_odd():
     assert is_even(-3) is False
+||||||| parent of e8150a3 (feat: add factorial() to calculator)
+||||||| parent of 8de4b8a (feat: add factorial() to calculator)
+
+
+def test_factorial_zero():
+    assert factorial(0) == 1
+
+
+def test_factorial_one():
+    assert factorial(1) == 1
+
+
+def test_factorial_positive():
+    assert factorial(5) == 120
+
+
+def test_factorial_negative_raises():
+    with pytest.raises(ValueError):
+        factorial(-1)

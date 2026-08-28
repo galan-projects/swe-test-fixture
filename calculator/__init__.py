@@ -17,3 +17,7 @@ from .core import add, subtract, divide
 ||||||| parent of ca2133d (feat: add is_even() to calculator)
 from .core import add, subtract
 from .core import add, subtract, is_even
+||||||| parent of e8150a3 (feat: add factorial() to calculator)
+||||||| parent of 8de4b8a (feat: add factorial() to calculator)
+from .core import add, subtract
+from .core import add, factorial, subtract
