@@ -5,7 +5,12 @@ on:
     branches: [main]
 jobs:
   test:
-    runs-on: ubuntu-latest
+    # Self-hosted since 2026-09-01: org billing block — GitHub-hosted jobs
+    # (ubuntu-latest) stop starting entirely ("recent account payments have
+    # failed or your spending limit needs to be increased" — fail in ~2s with
+    # zero steps). Moved to the org self-hosted Linux fleet (neovm runners,
+    # labels verified 2026-09-01), same migration as the other org repos.
+    runs-on: [self-hosted, Linux, X64, nas, prod]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
